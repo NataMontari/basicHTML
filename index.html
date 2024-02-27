@@ -215,6 +215,19 @@
     }
     .subheader {
         font-weight: bold;
+        position: relative;
+        color: rgb(255, 187, 0); /* Set the text color to yellow */
+        margin-bottom: 20px; /* Add margin at the bottom */
+    }
+    .subheader::before {
+        position: absolute;
+        content: ""; /* Add an empty content before the text */
+        top: -10px;
+        left: 50%; /* Position the line element at the center */
+        transform: translateX(-50%); /* Center the line element horizontally */
+        width: 50px; /* Set the width of the line */
+        height: 2px; /* Set the height of the line */
+        background-color: rgb(255, 187, 0); /* Set the color of the line */
     }
 
     .review-images {
@@ -452,7 +465,9 @@
     .sub-section-btns button {
         margin-right: 10px; /* Add margin between buttons */
     }
-    
+    .some_padding{
+        padding-left:10%;
+    }
     
     </style>
     <body>
@@ -493,10 +508,9 @@
     
         <main class = "main">
 
-
-         
-
-            <p class="subheader">Our Recomendation</p>
+            <div class="some_padding">
+                <p class="subheader">Our Recomendation</p>
+            </div>
 
             <nav class = "second-container">
                 <h2 class="section-subtitle">Featured House</h2>

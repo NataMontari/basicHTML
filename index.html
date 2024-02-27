@@ -10,7 +10,12 @@
         position: relative;
         display: inline;
     }*/
-
+    body{
+        background-image: url("./icons/background.png");
+        background-size: 100% auto; /* Set the width to cover the full width of the page */
+        background-position: center; /* Centers the background image */
+        background-repeat: no-repeat; /* Prevents the background image from repeating */
+    }
     .header-logo {
         position: absolute;
         padding-left: 5%;
@@ -96,7 +101,7 @@
     }
     .icon-container {
         position: absolute;
-        top: 10px; /* Adjust the top position as needed */
+        bottom: 20px;
         left: 10px; /* Adjust the left position as needed */
         background-color: rgba(255, 255, 255, 0.5); /* Add background color with transparency */
         padding: 5px; /* Add padding to the container */
@@ -240,8 +245,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: absolute;
             bottom: -10%;
-            width: 40%; /* Adjust the width of the white box */
-            height:20%;
+            width: 50%; /* Adjust the width of the white box */
+            height:30%;
             left: 50%; /* Position the box in the center horizontally */
             font: 12px;
             transform: translateX(-50%);
@@ -264,10 +269,13 @@
         margin: 0;
     }
     .rating {
-        width: 10%;
-        height: 10%;
+        width: 20px;
+        height: 20px;
         margin-left: auto;
         display: block;
+    }
+    .star-icon{
+        font-weight:bold;
     }
     /*.se-offer {
     width: calc(25% - 20px); /* Adjust the width as needed 
@@ -286,6 +294,7 @@
     .tips-section {
         display: flex;
         flex-direction: row;
+        padding-left: 10%;
     }
     .centered-content {
         text-align: center;
@@ -331,38 +340,8 @@
         margin-top: 10px;
     }
 
-
-    .review-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .review-pretty {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .review-box {
-        width: 50%; /* Half width */
-    }
-    .review-images {
-        width: 50%; /* Half width */
-        display: flex;
-        justify-content: space-between;
-    }
-    .review {
-        margin-bottom: 10px;
-    }
-    .house-agent {
-        width: 30px; /* Adjust width as needed */
-        height: auto;
-        margin-right: 10px;
-    }
-    .rating {
-        width: 10px; /* Adjust width as needed */
-        height: auto;
-        margin-right: 5px;
-        margin-bottom: 5px;
+    .review-box{
+        font-size: 10px;
     }
     .subscribe-section {
         position: relative;
@@ -514,7 +493,7 @@
                     <div class="house-container">
                         <img class="house-offer" src="./icons/Rectangle_15.svg" alt="Roselands house" />
                         <div class="icon-container">
-                            <img src="./icons/Fire.png" alt="Fire popular icon"/>
+                            <img src="./icons/fire.svg" alt="Fire popular icon"/>
                             Popular
                         </div>
                     </div>
@@ -553,7 +532,7 @@
                     <div class = "house-container">
                         <img class="house-offer" src="./icons/Rectangle 15_2.svg" alt="The old lighthouse" />
                         <div class="icon-container">
-                            <img src="./icons/PentHouse.png" alt="PentHouse Best Deals icon"/>
+                            <img src="./icons/wallet.svg" alt="PentHouse Best Deals icon"/>
                             Best Deals
                         </div>
                     </div>
@@ -575,7 +554,7 @@
                     <div class = "house-container">
                         <img class="house-offer" src="./icons/Rectangle_15_4.svg" alt="Cosmo's house" />
                         <div class="icon-container">
-                            <img src="./icons/Fire.png" alt="Fire popular icon"/>
+                            <img src="./icons/fire.svg" alt="Fire popular icon"/>
                             Popular
                         </div>
                     </div>
@@ -611,15 +590,15 @@
                     <div class="house-description">
                         <p class="house-detail">House Detail</p>
                         <div class="house-items">
-                            <img class="items-icons" src="./icons/bedroom.png" alt="Num of Bedrooms"/>
+                            <img class="items-icons" src="./icons/bed.svg" alt="Num of Bedrooms"/>
                             <span class="item-text">4 Bedrooms</span>
-                            <img class="items-icons" src="./icons/bathroom.png" alt="Num of Bathrooms"/>
+                            <img class="items-icons" src="./icons/bath.svg" alt="Num of Bathrooms"/>
                             <span class="item-text">2 Bathrooms</span>
                         </div>
                         <div class="house-items">
-                            <img class="items-icons" src="./icons/carport.png" alt="Num of Carports"/>
+                            <img class="items-icons" src="./icons/car.svg" alt="Num of Carports"/>
                             <span class="item-text">1 Carports</span>
-                            <img class="items-icons" src="./icons/floor.png" alt="Num of Floors"/>
+                            <img class="items-icons" src="./icons/floor.svg" alt="Num of Floors"/>
                             <span class="item-text">2 Floors</span>
                         </div>
                         <hr>
@@ -646,12 +625,12 @@
                     </div>
                 </div>
             </section>
-
-
-
-            <section class="review-section">
+            <div class = "centered-content">
                 <p class="subheader">See Our Review</p>
                 <h2 class="section-subtitle-2">What Our Users Say About Us</h2>
+            </div>
+
+            <section class="review-section">
         
                 <div class = "review-pretty">
                     <div class="review-images">
@@ -663,11 +642,17 @@
                     <div class="review-box">
                         <h3 class="review">Best! I Got The House I Wanted Through Hounter</h3>
                         <p class="review">Through this website, I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want</p>
-                        <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director" />
-                        <h5 class="house-agent-name">Dianne Russel</h5>
-                        <p class="house-agent-description">Manager Director</p>
-                        <img class="rating" src="./icons/star.svg" alt="Rating icon" />
-                        <span>4.6</span>
+                        <div class="name-icon">
+                            <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director" />
+                            <div>
+                                <h5 class="house-agent-name">Dianne Russel</h5>
+                                <p class="house-agent-description">Manager Director</p>
+                            </div>
+                            <img class="rating" src="./icons/star.svg" alt="Rating icon" />
+                            <span class = "star-icon">4.6</span>
+                        </div>
+
+  
                     </div>
                 </div>
             </section>

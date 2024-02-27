@@ -106,6 +106,7 @@
         flex: 0 0 calc(25% - 20px); /* Adjust width of house containers */
         margin-bottom: 20px; /* Add margin at the bottom */
         position: relative;
+        
     }
 
     .recommendation-houses {
@@ -129,17 +130,21 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
+        padding-right: 4em;
     }
-    .house-lessor-icon{
-        position: absolute;
+    .seller-details {
+        display: flex;
+        align-items: center; /* Align items vertically */
     }
 
-    .house-lessor-name{
-        padding-left:50px;
+    .house-lessor-icon {
+        margin-right: 10px; /* Adjust margin as needed */
     }
-    .house-lessor-description{
-        padding-left: 50px;
+    
+    .house-lessor-description {
+        margin: 0; /* Remove default margins */
     }
+
     /*.house-offer {
         width: calc(25% - 20px); /* Adjust the width as needed 
         margin-right: 20px; /* Add margin between images
@@ -212,6 +217,7 @@
             </nav>
 
             <section class = "recommendation-houses">
+
                 <div class="house-wrapper">
 
                     <div class="house-container">
@@ -224,11 +230,16 @@
                     <div class="house-details">
                         <h3 class="house-name">Roselands House</h3>
                         <h4 class="price-tag">$ 35.000.000 </h4>
-                        <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
-                        <h5 class = "house-lessor-name">Dianne Russel</h5>
-                        <p class = "house-lessor-description">Manchester, Kentucky</p>
+                        <div class="seller-details">
+                            <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
+                            <div>
+                                <h5 class = "house-lessor-name">Dianne Russel</h5>
+                                <p class = "house-lessor-description">Manchester, Kentucky</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="house-wrapper">
 
                     <div class = "house-container">
@@ -237,11 +248,16 @@
                     <div class="house-details">
                         <h3 class="house-name">Woodlandside</h3>
                         <h4 class="price-tag">$ 20.000.000 </h4>
-                        <img class="house-lessor-icon" src="./icons/Woodlandside_lessor.svg" alt="Woodlandside-lessor"/>
-                        <h5 class = "house-lessor-name">Robert Fox</h5>
-                        <p class = "house-lessor-description">Dr.San Jose, South Dakota</p>
+                        <div class="seller-details">
+                            <img class="house-lessor-icon" src="./icons/Woodlandside_lessor.svg" alt="Woodlandside-lessor"/>
+                            <div>
+                                <h5 class = "house-lessor-name">Robert Fox</h5>
+                                <p class = "house-lessor-description">Dr.San Jose, South Dakota</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="house-wrapper">
                     <div class = "house-container">
                         <img class="house-offer" src="./icons/Rectangle 15_2.svg" alt="The old lighthouse" />
@@ -254,11 +270,16 @@
                     <div class="house-details">
                         <h3 class="house-name">The old Lighthouse</h3>
                         <h4 class="price-tag">$ 44.000.000 </h4>
-                        <img class="house-lessor-icon" src="./icons/Ellipse_6_3.svg" alt="The_old_lighthouse_lessor"/>
-                        <h5 class = "house-lessor-name">Ronald Richards</h5>
-                        <p class = "house-lessor-description">Santa Ana, Illinois</p>
+                        <div class="seller-details">
+                            <img class="house-lessor-icon" src="./icons/Ellipse_6_3.svg" alt="The_old_lighthouse_lessor"/>
+                            <div>
+                                <h5 class = "house-lessor-name">Ronald Richards</h5>
+                                <p class = "house-lessor-description">Santa Ana, Illinois</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class = "house-wrapper">
                     <div class = "house-container">
                         <img class="house-offer" src="./icons/Rectangle_15_4.svg" alt="Cosmo's house" />
@@ -270,9 +291,13 @@
                     <div class="house-details">
                         <h3 class="house-name">Cosmo's House</h3>
                         <h4 class="price-tag">$ 22.000.000 </h4>
+                    </div>
+                    <div class="seller-details">
                         <img class="house-lessor-icon" src="./icons/Ellipse_6_8.svg" alt="Cosmos_house_lessor"/>
-                        <h5 class = "house-lessor-name">Jenny Williams</h5>
-                        <p class = "house-lessor-description">Preston Rd</p>
+                        <div>
+                            <h5 class="house-lessor-name">Jenny Williams</h5>
+                            <p class="house-lessor-description">Preston Rd</p>
+                        </div>
                     </div>
                 </div>
             </section>

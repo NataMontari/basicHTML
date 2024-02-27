@@ -58,6 +58,7 @@
     .header {
         display: flex;
         align-items: stretch;
+        padding-bottom: 10%;
     }
 
     /*.tag-container {
@@ -121,6 +122,7 @@
         overflow-x: hidden;
         padding-left: 10%;
         justify-content: space-between;
+        padding-bottom: 10%;
     }
     .house-details {
         text-align: left; /* Center align text */
@@ -145,8 +147,144 @@
         margin: 0; /* Remove default margins */
     }
 
-    /*.house-offer {
-        width: calc(25% - 20px); /* Adjust the width as needed 
+    .sell-section {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-bottom: 10%;
+    }
+
+    .sell-text {
+        width: 50%;
+    }
+        
+    .house-description {
+        margin-top: 20px;
+    }
+    
+    .house-items {
+        display: flex;
+        align-items: center;
+    }
+    
+    .house-items img {
+        margin-right: 10px;
+    }
+    
+    .house-agent {
+        display: flex;
+        align-items: center;
+    }
+    
+    .house-agent-name {
+        margin-right: 10px;
+    }
+
+    .video-container {
+
+            width: 50%;
+            height: 50vh;
+            position: relative;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding-left: 10%;
+    }
+
+    .video-thumbnails {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 10%;
+    }
+
+    .video-thumbnails img {
+        width: 20%;
+        height: auto;
+    }
+
+    .review-section {
+        text-align: center;
+        padding-bottom: 20%;
+    }
+    .subheader {
+        font-weight: bold;
+    }
+    .section-subtitle {
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+    .review-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4em;
+        gap: 4em;
+        overflow: hidden;
+    }
+    .review-images img {
+        height: auto;
+    }
+    .review-images img:nth-child(1) {
+        width: 30%;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 30% 100%);
+    }
+    .review-images img:nth-child(3) {
+        width: 30%;
+        clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%);
+    }
+    .review-box {
+
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            bottom: -10%;
+            width: 40%; /* Adjust the width of the white box */
+            height:20%;
+            left: 50%; /* Position the box in the center horizontally */
+            font: 12px;
+            transform: translateX(-50%);
+            padding: 20px; /* Add padding inside the box */
+
+    }
+    .review-pretty{
+        position:relative;
+    }
+
+    .review-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .review-text {
+        margin-bottom: 10px;
+    }
+    .house-agent {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .house-agent-name {
+        margin-right: 10px;
+    }
+    .house-agent-description {
+        margin: 0;
+    }
+    .rating {
+        width: 10%;
+        height: 10%;
+        margin-left: auto;
+        display: block;
+    }
+    /*.se-offer {
+    width: calc(25% - 20px); /* Adjust the width as needed 
         margin-right: 20px; /* Add margin between images
         margin-bottom: 20px; /* Add margin below images 
     }*/
@@ -159,6 +297,181 @@
     /*.tag-container, .house-name, .price-tag, .house-lessor-icon, .house-lessor-name, .house-lessor-description {
         margin-top: 10px; /* Add padding at the top *
     }*/
+    .tips-section {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 10%;
+    }
+    .subheader {
+        font-weight: bold;
+        margin-bottom: 10px;
+        width: 100%; /* Full width */
+    }
+    .section-subtitle {
+        margin-top: 10px;
+        font-size: 1.2em;
+        width: 100%; /* Full width */
+    }
+    .artikel-btn {
+        width: 100%; /* Full width */
+        margin-bottom: 10px;
+    }
+    .house-info {
+        display: flex;
+        align-items: center;
+        width: 50%; /* Half width */
+    }
+    .house-info img {
+        width: 80px; /* Adjust width as needed */
+        height: auto;
+        margin-right: 10px;
+    }
+    .house-description {
+        text-align: left;
+    }
+    .house-lessor-icon {
+        width: 30px; /* Adjust width as needed */
+        height: auto;
+        margin-right: 10px;
+    }
+    .house-lessor-name {
+        margin-bottom: 5px;
+    }
+    .time {
+        width: 20px; /* Adjust width as needed */
+        height: auto;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .review-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-pretty {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .review-box {
+        width: 50%; /* Half width */
+    }
+    .review-images {
+        width: 50%; /* Half width */
+        display: flex;
+        justify-content: space-between;
+    }
+    .review {
+        margin-bottom: 10px;
+    }
+    .house-agent {
+        width: 30px; /* Adjust width as needed */
+        height: auto;
+        margin-right: 10px;
+    }
+    .rating {
+        width: 10px; /* Adjust width as needed */
+        height: auto;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .subscribe-section {
+        position: relative;
+        padding-left: 10%;
+        padding-right:10%;
+        padding-bottom: 10%;
+    }
+
+    .background-wrapper {
+        position: relative;
+        text-align: center;
+    }
+    
+    .background-section-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        margin-bottom: 20px;
+        font-size: 1.5em; /* Adjust font size as needed */
+    }
+    
+    .subscribe-input,
+    .subscribe-btn {
+        width: 80%; /* Adjust input and button width as needed */
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 1em; /* Adjust font size as needed */
+    }
+    footer {
+        background-color: #f0f0f0; /* Adjust background color as needed */
+        padding: 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .footer-container:first-child {
+        flex-basis: calc(100% - 200px); /* Adjust the width to fit your content */
+    }
+    
+    footer nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    
+    .additional-info {
+        margin-top: 5px;
+        font-size: 0.8em;
+    }
+    
+    .icon-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .footer-container > div {
+        flex: 1;
+        margin-top: 20px;
+    }
+    
+    .subheader {
+        font-weight: bold;
+    }
+    
+    a {
+        display: block;
+        margin-top: 5px;
+        color: #333; /* Adjust link color as needed */
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    
     </style>
     <body>
         <header class="header">
@@ -312,160 +625,176 @@
 
 
             <section class="sell-section">
-
-                <p class="subheader">Ready To Sell!</p>
-                <h2 class="section-subtitle">Let's Tour And See Our House</h2>
-                <p class="additional-info">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
-    
-                <div class="house-description">
-                    <p class="house-detail">House Detail</p>
-                    <img class="items-icons" src="./icons/bedroom.png" alt="Num of Bedrooms"/>
-                    <span class="item-text">4 Bedrooms</span>
-                    <img class="items-icons" src="./icons/bathroom.png" alt="Num of Bathrooms"/>
-                    <span class="item-text">2 Bathrooms</span>
-                    <img class="items-icons" src="./icons/carport.png" alt="Num of Carports"/>
-                    <span class="item-text">1 Carports</span>
-                    <img class="items-icons" src="./icons/floor.png" alt="Num of Floors"/>
-                    <span class="item-text">2 Floors</span>
-                    <hr>
-    
-                    <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director"/>
-                    <h5 class = "house-agent-name">Dianne Russel</h5>
-                    <p class = "house-agent-description">Manager Director</p>
-    
-                    <button class = "contact-btn" type="button">Contact Now</button>
-    
+                <div class="sell-text">
+                    <p class="subheader">Ready To Sell!</p>
+                    <h2 class="section-subtitle">Let's Tour And See Our House</h2>
+                    <p class="additional-info">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+            
+                    <div class="house-description">
+                        <p class="house-detail">House Detail</p>
+                        <div class="house-items">
+                            <img class="items-icons" src="./icons/bedroom.png" alt="Num of Bedrooms"/>
+                            <span class="item-text">4 Bedrooms</span>
+                            <img class="items-icons" src="./icons/bathroom.png" alt="Num of Bathrooms"/>
+                            <span class="item-text">2 Bathrooms</span>
+                        </div>
+                        <div class="house-items">
+                            <img class="items-icons" src="./icons/carport.png" alt="Num of Carports"/>
+                            <span class="item-text">1 Carports</span>
+                            <img class="items-icons" src="./icons/floor.png" alt="Num of Floors"/>
+                            <span class="item-text">2 Floors</span>
+                        </div>
+                        <hr>
+                        <div class="house-agent">
+                            <img class="house-agent-icon" src="./icons/Ellipse_6_1.svg" alt="Manager Director"/>
+                            <div class="agent-details">
+                                <h5 class="house-agent-name">Dianne Russel</h5>
+                                <p class="house-agent-description">Manager Director</p>
+                            </div>
+                            <button class="contact-btn" type="button">Contact Now</button>
+                        </div>
+                    </div>
                 </div>
-                
-                <video controls>
-                    <img class="picture_on_video" src="./icons/Rectangle_18.svg" alt="couch" />
-                    <img class="picture_on_video" src="./icons/Rectangle_19.svg" alt="vase" />
-                    <img class="picture_on_video" src="./icons/Rectangle_20.svg" alt="chair" />
-    
-                    <source src="http://some_video.com" type= "video/mp4">
-                    Your browser does not support the video feature
-                </video>
             
-            
+                <div class="video-container">
+                    <video controls>
+                        <source src="http://some_video.com" type="video/mp4">
+                        Your browser does not support the video feature
+                    </video>
+                    <div class="video-thumbnails">
+                        <img class="picture_on_video" src="./icons/Rectangle_18.svg" alt="couch" />
+                        <img class="picture_on_video" src="./icons/Rectangle_19.svg" alt="vase" />
+                        <img class="picture_on_video" src="./icons/Rectangle_20.svg" alt="chair" />
+                    </div>
+                </div>
             </section>
 
 
 
             <section class="review-section">
-              <p class="subheader">See Our Review</p>
-              <h2 class="section-subtitle">What Our User Say About Us</h2>
-
-              <img class="review-house" src="./icons/Rectangle_31.svg" alt="Reviewed Pent House"/>
-
-              <img class="review-house" src="./icons/Rectangle_21.svg" alt="Reviewed Pent House"/>
-
-              <h3 class = "review">Best! I Got The House I Wanted Through Hounter</h3>
-              <p class="review"> 
-                  Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want
-              </p>
-
-              <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director"/>
-              <h5 class = "house-agent-name">Dianne Russel</h5>
-              <p class = "house-agent-description">Manager Director</p>
-
-              <img class="rating" src="./icons/star.svg" alt="Rating icon" />
-              <span>4.6</span>
-
-              <img class="review-house" src="./icons/Rectangle_31_1.svg" alt="Reviewed Pent House"/>
+                <p class="subheader">See Our Review</p>
+                <h2 class="section-subtitle">What Our Users Say About Us</h2>
+        
+                <div class = "review-pretty">
+                    <div class="review-images">
+                        <img class="review-house" src="./icons/Rectangle_31.svg" alt="Reviewed Pent House" />
+                        <img class="review-house" src="./icons/Rectangle_21.svg" alt="Reviewed Pent House" />
+                        <img class="review-house" src="./icons/Rectangle_31_1.svg" alt="Reviewed Pent House" />
+                    </div>
+        
+                    <div class="review-box">
+                        <h3 class="review">Best! I Got The House I Wanted Through Hounter</h3>
+                        <p class="review">Through this website, I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want</p>
+                        <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director" />
+                        <h5 class="house-agent-name">Dianne Russel</h5>
+                        <p class="house-agent-description">Manager Director</p>
+                        <img class="rating" src="./icons/star.svg" alt="Rating icon" />
+                        <span>4.6</span>
+                    </div>
+                </div>
             </section>
 
 
 
             <section class="tips-section">
-              <p class="subheader">See Tips And Trick From Our Partnership</p>
-              <h2 class="section-subtitle">Find Out More About Selling And Buying Homes</h2>
-              <button type="button" class="artikel-btn">More Artikel</button>
-
-              <div>
-                  <img class = "house-picture" src = "./icons/Rectangle_22.svg" alt="First House Picture">
-                  <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
-                  <p class = "house-lessor-name">Dianne Russel</p>
-
-                  <h5>The Things We need To Check When We Want To Buy A House</h5>
-                  <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                  <p>4 min read| 25 Apr 2021</p>
-
-                  <img class = "house-picture" src = "./icons/Rectangle_22_1.svg" alt="Second House Picture">
-                  <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
-                  <p class = "house-lessor-name">Courtney Henry</p>
-
-                  <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
-                  <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                  <p>6 min read| 24 Apr 2021</p>
-
-
-                  <img class = "house-picture" src = "./icons/Rectangle_22_2.svg" alt="Third House Picture">
-                  <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
-                  <p class = "house-lessor-name">Darlene Robertson</p>
-
-                  <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
-                  <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                  <p>2 min read| 24 Apr 2021</p>
-
-              </div>
-
-              <img class = "house-picture" src = "./icons/Rectangle_23.svg" alt="Fourth House Picture">
-              <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
-              <p class = "house-lessor-name">Cameron Williamson</p>
-
-              <h5>12 Things To Know Before Buying A House</h5>
-              <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
-              <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-              <p>8 min read| 25 Apr 2021</p>
-
+                <p class="subheader">See Tips And Trick From Our Partnership</p>
+                <h2 class="section-subtitle">Find Out More About Selling And Buying Homes</h2>
+                <button type="button" class="artikel-btn">More Artikel</button>
+        
+                <div class="house-info">
+                    <div>
+                        <img class="house-picture" src="./icons/Rectangle_22.svg" alt="First House Picture">
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
+                        <p class="house-lessor-name">Dianne Russel</p>
+                    </div>
+                    <div class="house-description">
+                        <h5>The Things We need To Check When We Want To Buy A House</h5>
+                        <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                        <p>4 min read| 25 Apr 2021</p>
+                    </div>
+                </div>
+        
+                <div class="house-info">
+                    <div>
+                        <img class="house-picture" src="./icons/Rectangle_22_1.svg" alt="Second House Picture">
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
+                        <p class="house-lessor-name">Courtney Henry</p>
+                    </div>
+                    <div class="house-description">
+                        <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
+                        <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                        <p>6 min read| 24 Apr 2021</p>
+                    </div>
+                </div>
+        
+                <div class="house-info">
+                    <div>
+                        <img class="house-picture" src="./icons/Rectangle_22_2.svg" alt="Third House Picture">
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
+                        <p class="house-lessor-name">Darlene Robertson</p>
+                    </div>
+                    <div class="house-description">
+                        <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
+                        <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                        <p>2 min read| 24 Apr 2021</p>
+                    </div>
+                </div>
+                <img class = "house-picture" src = "./icons/Rectangle_23.svg" alt="Fourth House Picture">
+                <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
+                <p class = "house-lessor-name">Cameron Williamson</p>
+  
+                <h5>12 Things To Know Before Buying A House</h5>
+                <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                <p>8 min read| 25 Apr 2021</p>
             </section>
 
 
 
-          <section class = "subscribe-section">
-
-            <img class="background-section-img" src="./icons/Rectangle_24.svg" alt="Subscribe background"/>
-            <h2 class="section-subtitle">Subscribe For More Info And Update From Hounter</h2>
-            <input type="email" class="subscribe-input" placeholder="Your email here">
-            <input type="submit" class="subscribe-btn" value = "Subscribe Now">
-
-          </section>
+            <section class="subscribe-section">
+                <div class="background-wrapper">
+                    <img class="background-section-img" src="./icons/Rectangle_24.svg" alt="Subscribe background"/>
+                    <div class="centered-text">
+                        <h2 class="section-subtitle">Subscribe For More Info And Update From Hounter</h2>
+                        <input type="email" class="subscribe-input" placeholder="Your email here">
+                        <input type="submit" class="subscribe-btn" value="Subscribe Now">
+                    </div>
+                </div>
+            </section>
 
 
         </main>
 
 
         <footer>
-            <nav>
-                <img class="footer-logo" src="./icons/Logo.svg" alt="Logo"/>
-                <span class="logo">Hounter</span>
-                <p class="additional-info">We provide information about properties such as houses, villas and apartnments to help people to find their dream home</p>
-            </nav>
-            <div>
-                <img class = "links" src="./icons/Frame_20.svg" alt="Logo"/>
-
-            </div>
-            <div>
-                <p class="subheader">Property</p>
-                <a href="some_link_on_site">House</a>
-                <a href="some_link_on_site">Apartnment</a>
-                <a href="some_link_on_site">Villa</a>
-
-            </div>
-            <div>
-                <p class="subheader">Article</p>
-                <a href="some_link_on_site">New Article</a>
-                <a href="some_link_on_site">Popular Article</a>
-                <a href="some_link_on_site">Most Read</a>
-                <a href="some_link_on_site">Tips & Tricks</a>
-            </div>
-            <div>
-                <p class="subheader">Contact</p>
-                <p>2464 Royal Ln.Mesa, New Jersey 45463</p>
-                <p>(671)555-0110</p>
-                <a href="hounter.com">info@hounter.com</a>
+            <div class="footer-container">
+                <div>
+                    <img class="footer-logo" src="./icons/Logo.svg" alt="Logo"/>
+                    <p class="additional-info">We provide information about properties such as houses, villas, and apartments to help people find their dream home.</p>
+                    <img class="links" src="./icons/Frame_20.svg" alt="Logo"/>
+                </div>
+                <div>
+                    <p class="subheader">Property</p>
+                    <a href="some_link_on_site">House</a>
+                    <a href="some_link_on_site">Apartment</a>
+                    <a href="some_link_on_site">Villa</a>
+                </div>
+                <div>
+                    <p class="subheader">Article</p>
+                    <a href="some_link_on_site">New Article</a>
+                    <a href="some_link_on_site">Popular Article</a>
+                    <a href="some_link_on_site">Most Read</a>
+                    <a href="some_link_on_site">Tips & Tricks</a>
+                </div>
+                <div>
+                    <p class="subheader">Contact</p>
+                    <p>2464 Royal Ln.Mesa, New Jersey 45463</p>
+                    <p>(671)555-0110</p>
+                    <a href="hounter.com">info@hounter.com</a>
+                </div>
             </div>
         </footer>
+        
 
 
     </body>

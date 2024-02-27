@@ -5,42 +5,200 @@
         <meta name="viewport" content="width=device-width" />
         <title>Web index html</title>
     </head>
+    <style>
+    /*.header {
+        position: relative;
+        display: inline;
+    }*/
+
+    .header-logo {
+        position: absolute;
+        padding-left: 5%;
+    }
+
+    .tag-container {
+        width:50%;
+        position: relative;
+        float: right;
+    }
+
+    .menu-img {
+        width: 100%; /* Set the width of the image container to 100% */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+    }
+
+    .menu-btns {
+        position: absolute;
+        display: flex;
+        justify-content: space-between; /* Align buttons horizontally in the center */
+        align-items: stretch; /* Align buttons vertically in the center */
+        align-content: space-between;
+        gap: 20px;
+        min-width: 100px;
+        left: 50%; /* Position the buttons horizontally at 50% from the left edge of the container */
+        top: 10%; /* Position the buttons vertically at 50% from the top edge of the container */
+        transform: translate(-50%, -50%); /* Center the buttons */
+    }
+    
+    .img-container {
+        position: absolute;
+        bottom: 0; /* Position the image container at the bottom*/
+        left: 10%; /* Align the image container to the left */
+        display: flex;
+        align-content: space-between;
+    }
+    .on-menu{
+        padding-bottom: 5%;
+    }
+    .main-title{
+        padding-top: 5%;
+    }
+
+    .header {
+        display: flex;
+        align-items: stretch;
+    }
+
+    /*.tag-container {
+        display: flex;
+        width:50%;
+        float: right;
+        align-items: center;
+    }
+    
+    .img-container {
+        position: relative;
+    }*/
+    
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Align content to the right */
+        padding-left: 5%;
+    }
+
+    .second-container{
+        display: flex; /* Make the container a flex container */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Distribute items evenly across the container */
+        padding-left: 10%;
+        padding-right: 20px; /* Add padding after the buttons */
+        padding-bottom: 20px; /* Add padding after the buttons */
+    }
+
+    .icon-container {
+        position: absolute;
+        top: 10px; /* Adjust the top position as needed */
+        left: 10px; /* Adjust the left position as needed */
+        background-color: rgba(255, 255, 255, 0.5); /* Add background color with transparency */
+        padding: 5px; /* Add padding to the container */
+    }
+
+    .house-offer {
+        max-width: 40em; /* Set max-width for the images */
+        height: auto;
+    }
+
+    .house-container {
+        flex: 0 0 calc(25% - 20px); /* Adjust width of house containers */
+        margin-bottom: 20px; /* Add margin at the bottom */
+        position: relative;
+    }
+
+    .recommendation-houses {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: hidden; /* Enable horizontal scrolling */
+        padding-left: 10%;
+    }
+    .recommendation-section {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+        padding-left: 10%;
+        justify-content: space-between;
+    }
+    .house-details {
+        text-align: left; /* Center align text */
+    }
+
+    .house-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .house-lessor-icon{
+        position: absolute;
+    }
+
+    .house-lessor-name{
+        padding-left:50px;
+    }
+    .house-lessor-description{
+        padding-left: 50px;
+    }
+    /*.house-offer {
+        width: calc(25% - 20px); /* Adjust the width as needed 
+        margin-right: 20px; /* Add margin between images
+        margin-bottom: 20px; /* Add margin below images 
+    }*/
+
+    /*.house-info {
+        width: 100%; /* Make text and icons span the full width 
+        text-align: center; /* Center text and icons 
+    }*/
+
+    /*.tag-container, .house-name, .price-tag, .house-lessor-icon, .house-lessor-name, .house-lessor-description {
+        margin-top: 10px; /* Add padding at the top *
+    }*/
+    </style>
     <body>
-        <img class="background-img" src="./icons/Decore.svg" alt="Background" />
         <header class="header">
-            <img class="header-logo" src="./icons/Jadoo.svg" alt="Logo" />
-            <span class="logo">Hounter</span>
-            <nav class="header-nav">
+            <img class="header-logo" src="./icons/Logo.svg" alt="Logo" />
+            <div class = "content">
+                <h1 class = "main-title">Find the Place To Live <br><span class="title-highlight">Your Dreams</span><br> Easily Here</h1>
+                <p class="additional-info">Everything you need about finding your place to live will be here, where it will be easier for you</p>
+                <i class="icon-search"><img src="./icons/location.svg" alt= "Search icon"></i>
+                <input type="text" placeholder="Search for the location you want!">
+                <input type="submit" class="search-btn" value = "Search&gt;">
+                <p class="additional-info">Our Partnership</p>
+                <div>
+                    <img class="partners" src="./icons/traveloka_logo_2.svg" alt= "Travelokane icon"/>
+                    <img class="partners" src="./icons/traveloka_logo_5.svg" alt= "Tiketcom icon"/>
+                    <img class="partners" src="./icons/traveloka_logo_3.svg" alt= "Airbnb icon"/>
+                    <img class="partners" src="./icons/traveloka_logo_4.svg" alt= "Tripadvisor icon"/>
+                </div>
+            </div>
+            <div class="tag-container">
+
+                <img class = "menu-img" src="./icons/image 6.svg" alt = "Menu House Example Image"/>
                 <div class="menu-btns">
                     <button type="button" class="about-us-btn">About us</button>
                     <button type="button" class="article-btn">Article</button>
                     <button type="menu" class="property-btn">Property</button>
                     <button type="button" class="sign-up-btn">Sign up</button>
                 </div>
-            </nav>
-            <img class = "menu-img-background" src="http://placehold.it/" alt = "Menu House Example Image"/>
-            <h1 class = "main-title">Find the Place To Live <span class="title-highlight">Your Dreams</span> Easily Here</h1>
-            <p class="additional-info">Everything you need about finding your place to live will be here, where it will be easier for you</p>
-            <i class="icon-search"><img src="./icons/Search.svg" alt= "Search icon"></i>
-            <input type="text" placeholder="Search for the location you want!">
-            <input type="submit" class="search-btn" value = "Search&gt;">
-            <p class="additional-info">Our Partnership</p>
-            <div>
-                <img class="partners" src="./icons/Travelokane.svg" alt= "Travelokane icon"/>
-                <img class="partners" src="./icons/Tiketcom.svg" alt= "Tiketcom icon"/>
-                <img class="partners" src="./icons/Airbnb.svg" alt= "Airbnb icon"/>
-                <img class="partners" src="./icons/Tripadvisor.svg" alt= "Tripadvisor icon"/>
+                <div class = "img-container">
+                    <img class = "menu-img-background" src="./icons/Group_7.svg" alt = "people group photo"/>
+                    <img class = "menu-img-background on-menu" src="./icons/Rectangle_12.svg" alt = "small  house photo"/>
+                    <img class = "menu-img-background" src="./icons/Ellipse 6.svg" alt = "some lady photo"/>
+                </div>
+               
             </div>
+
         </header>
     
         <main class = "main">
 
 
-          <section class="recommendation-section">
+         
 
             <p class="subheader">Our Recomendation</p>
 
-            <nav>
+            <nav class = "second-container">
                 <h2 class="section-subtitle">Featured House</h2>
                 <div class="sub-section-btns">
                     <button type="button" class="section-button">House</button>
@@ -53,160 +211,195 @@
                 </div>
             </nav>
 
-            <img class="house-offer" src="./images/Roselands_house.jpg" alt="Roselands house" />
-            <div class="tag-container">
-                <img src="./icons/Fire.png" alt="Fire popular icon"/>
-                Popular
-            </div>
-            <h3 class="house-name">Roselands House</h3>
-            <h4 class="price-tag">$ 35.000.000 </h4>
-            <img class="house-lessor-icon" src="./icons/Roselands_lessor.svg" alt="Roselands-lessor"/>
-            <h5 class = "house-lessor-name">Dianne Russel</h5>
-            <p class = "house-lessor-description">Manchester, Kentucky</p>
+            <section class = "recommendation-houses">
+                <div class="house-wrapper">
 
-            <img class="house-offer" src="./images/Woodlandside_house.jpg" alt="Woodlandside house" />
-            <div class="tag-container">
-                <img src="./icons/House.png" alt="House New House icon"/>
-                New House
-            </div>
-            <h3 class="house-name">Woodlandside</h3>
-            <h4 class="price-tag">$ 20.000.000 </h4>
-            <img class="house-lessor-icon" src="./icons/Woodlandside_lessor.svg" alt="Woodlandside-lessor"/>
-            <h5 class = "house-lessor-name">Robert Fox</h5>
-            <p class = "house-lessor-description">Dr.San Jose, South Dakota</p>
+                    <div class="house-container">
+                        <img class="house-offer" src="./icons/Rectangle_15.svg" alt="Roselands house" />
+                        <div class="icon-container">
+                            <img src="./icons/Fire.png" alt="Fire popular icon"/>
+                            Popular
+                        </div>
+                    </div>
+                    <div class="house-details">
+                        <h3 class="house-name">Roselands House</h3>
+                        <h4 class="price-tag">$ 35.000.000 </h4>
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
+                        <h5 class = "house-lessor-name">Dianne Russel</h5>
+                        <p class = "house-lessor-description">Manchester, Kentucky</p>
+                    </div>
+                </div>
+                <div class="house-wrapper">
 
-            <img class="house-offer" src="./images/The_old_lighthouse.jpg" alt="The old lighthouse" />
-            <div class="tag-container">
-                <img src="./icons/PentHouse.png" alt="PentHouse Best Deals icon"/>
-                Best Deals
-            </div>
-            <h3 class="house-name">The old Lighthouse</h3>
-            <h4 class="price-tag">$ 44.000.000 </h4>
-            <img class="house-lessor-icon" src="./icons/The_old_lighthouse_lessor.svg" alt="The_old_lighthouse_lessor"/>
-            <h5 class = "house-lessor-name">Ronald Richards</h5>
-            <p class = "house-lessor-description">Santa Ana, Illinois</p>
+                    <div class = "house-container">
+                        <img class="house-offer" src="./icons/Rectangle_15_1.svg" alt="Woodlandside house" />
+                    </div> 
+                    <div class="house-details">
+                        <h3 class="house-name">Woodlandside</h3>
+                        <h4 class="price-tag">$ 20.000.000 </h4>
+                        <img class="house-lessor-icon" src="./icons/Woodlandside_lessor.svg" alt="Woodlandside-lessor"/>
+                        <h5 class = "house-lessor-name">Robert Fox</h5>
+                        <p class = "house-lessor-description">Dr.San Jose, South Dakota</p>
+                    </div>
+                </div>
+                <div class="house-wrapper">
+                    <div class = "house-container">
+                        <img class="house-offer" src="./icons/Rectangle 15_2.svg" alt="The old lighthouse" />
+                        <div class="icon-container">
+                            <img src="./icons/PentHouse.png" alt="PentHouse Best Deals icon"/>
+                            Best Deals
+                        </div>
+                    </div>
+                
+                    <div class="house-details">
+                        <h3 class="house-name">The old Lighthouse</h3>
+                        <h4 class="price-tag">$ 44.000.000 </h4>
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_3.svg" alt="The_old_lighthouse_lessor"/>
+                        <h5 class = "house-lessor-name">Ronald Richards</h5>
+                        <p class = "house-lessor-description">Santa Ana, Illinois</p>
+                    </div>
+                </div>
+                <div class = "house-wrapper">
+                    <div class = "house-container">
+                        <img class="house-offer" src="./icons/Rectangle_15_4.svg" alt="Cosmo's house" />
+                        <div class="icon-container">
+                            <img src="./icons/Fire.png" alt="Fire popular icon"/>
+                            Popular
+                        </div>
+                    </div>
+                    <div class="house-details">
+                        <h3 class="house-name">Cosmo's House</h3>
+                        <h4 class="price-tag">$ 22.000.000 </h4>
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_8.svg" alt="Cosmos_house_lessor"/>
+                        <h5 class = "house-lessor-name">Jenny Williams</h5>
+                        <p class = "house-lessor-description">Preston Rd</p>
+                    </div>
+                </div>
+            </section>
 
-            <img class="house-offer" src="./images/Cosmos_house.jpg" alt="Cosmo's house" />
-            <div class="tag-container">
-                <img src="./icons/Fire.png" alt="Fire popular icon"/>
-                Popular
-            </div>
-            <h3 class="house-name">Cosmo's House</h3>
-            <h4 class="price-tag">$ 22.000.000 </h4>
-            <img class="house-lessor-icon" src="./icons/Cosmos_house_lessor.svg" alt="Cosmos_house_lessor"/>
-            <h5 class = "house-lessor-name">Jenny Williams</h5>
-            <p class = "house-lessor-description">Preston Rd</p>
-
-          </section>
+            <section class="recommendation-section">
 
 
 
-          <section class="sell-section">
 
-            <p class="subheader">Ready To Sell!</p>
-            <h2 class="section-subtitle">Let's Tour And See Our House</h2>
-            <p class="additional-info">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+            </section>
+    
 
-            <div class="house-description">
-                <p class="house-detail">House Detail</p>
-                <img class="items-icons" src="./icons/bedroom.png" alt="Num of Bedrooms"/>
-                <span class="item-text">4 Bedrooms</span>
-                <img class="items-icons" src="./icons/bathroom.png" alt="Num of Bathrooms"/>
-                <span class="item-text">2 Bathrooms</span>
-                <img class="items-icons" src="./icons/carport.png" alt="Num of Carports"/>
-                <span class="item-text">1 Carports</span>
-                <img class="items-icons" src="./icons/floor.png" alt="Num of Floors"/>
-                <span class="item-text">2 Floors</span>
-                <hr>
 
-                <img class="house-agent" src="./icons/House_agent.svg" alt="Manager Director"/>
-                <h5 class = "house-agent-name">Dianne Russel</h5>
-                <p class = "house-agent-description">Manager Director</p>
+            <section class="sell-section">
 
-                <button class = "contact-btn" type="button">Contact Now</button>
-
-            </div>
+                <p class="subheader">Ready To Sell!</p>
+                <h2 class="section-subtitle">Let's Tour And See Our House</h2>
+                <p class="additional-info">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+    
+                <div class="house-description">
+                    <p class="house-detail">House Detail</p>
+                    <img class="items-icons" src="./icons/bedroom.png" alt="Num of Bedrooms"/>
+                    <span class="item-text">4 Bedrooms</span>
+                    <img class="items-icons" src="./icons/bathroom.png" alt="Num of Bathrooms"/>
+                    <span class="item-text">2 Bathrooms</span>
+                    <img class="items-icons" src="./icons/carport.png" alt="Num of Carports"/>
+                    <span class="item-text">1 Carports</span>
+                    <img class="items-icons" src="./icons/floor.png" alt="Num of Floors"/>
+                    <span class="item-text">2 Floors</span>
+                    <hr>
+    
+                    <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director"/>
+                    <h5 class = "house-agent-name">Dianne Russel</h5>
+                    <p class = "house-agent-description">Manager Director</p>
+    
+                    <button class = "contact-btn" type="button">Contact Now</button>
+    
+                </div>
+                
+                <video controls>
+                    <img class="picture_on_video" src="./icons/Rectangle_18.svg" alt="couch" />
+                    <img class="picture_on_video" src="./icons/Rectangle_19.svg" alt="vase" />
+                    <img class="picture_on_video" src="./icons/Rectangle_20.svg" alt="chair" />
+    
+                    <source src="http://some_video.com" type= "video/mp4">
+                    Your browser does not support the video feature
+                </video>
             
-            <video controls>
-                <source src="http://some_video.com" type= "video/mp4">
-                Your browser does not support the video feature
-            </video>
             
-
-          </section>
-
-
-
-          <section class="review-section">
-            <p class="subheader">See Our Review</p>
-            <h2 class="section-subtitle">What Our User Say About Us</h2>
-
-            <img class="review-house" src="./images/Review_house.jpg" alt="Reviewed Pent House"/>
-
-            <h3 class = "review">Best! I Got The House I Wanted Through Hounter</h3>
-            <p class="review"> 
-                Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want
-            </p>
-
-            <img class="house-agent" src="./icons/House_agent.svg" alt="Manager Director"/>
-            <h5 class = "house-agent-name">Dianne Russel</h5>
-            <p class = "house-agent-description">Manager Director</p>
-
-            <img class="rating" src="./icons/Star_icon.svg" alt="Rating icon" />
-            <span>4.6</span>
-          </section>
+            </section>
 
 
 
-          <section class="tips-section">
-            <p class="subheader">See Tips And Trick From Our Partnership</p>
-            <h2 class="section-subtitle">Find Out More About Selling And Buying Homes</h2>
-            <button type="button" class="artikel-btn">More Artikel</button>
+            <section class="review-section">
+              <p class="subheader">See Our Review</p>
+              <h2 class="section-subtitle">What Our User Say About Us</h2>
 
-            <div>
-                <img class = "house-picture" src = "./images/First_House.jpg" alt="First House Picture">
-                <img class="house-lessor-icon" src="./icons/Roselands_lessor.svg" alt="Roselands-lessor"/>
-                <p class = "house-lessor-name">Dianne Russel</p>
+              <img class="review-house" src="./icons/Rectangle_31.svg" alt="Reviewed Pent House"/>
 
-                <h5>The Things We need To Check When We Want To Buy A House</h5>
-                <img class="time" src="./icons/Clock.svg" alt="Clock icon"/>
-                <p>4 min read| 25 Apr 2021</p>
+              <img class="review-house" src="./icons/Rectangle_21.svg" alt="Reviewed Pent House"/>
 
-                <img class = "house-picture" src = "./images/Second_House.jpg" alt="Second House Picture">
-                <img class="house-lessor-icon" src="./icons/CourtneyHenry.svg" alt="Courtney Henry"/>
-                <p class = "house-lessor-name">Courtney Henry</p>
+              <h3 class = "review">Best! I Got The House I Wanted Through Hounter</h3>
+              <p class="review"> 
+                  Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want
+              </p>
 
-                <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
-                <img class="time" src="./icons/Clock.svg" alt="Clock icon"/>
-                <p>6 min read| 24 Apr 2021</p>
+              <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director"/>
+              <h5 class = "house-agent-name">Dianne Russel</h5>
+              <p class = "house-agent-description">Manager Director</p>
+
+              <img class="rating" src="./icons/star.svg" alt="Rating icon" />
+              <span>4.6</span>
+
+              <img class="review-house" src="./icons/Rectangle_31_1.svg" alt="Reviewed Pent House"/>
+            </section>
 
 
-                <img class = "house-picture" src = "./images/Third_House.jpg" alt="Third House Picture">
-                <img class="house-lessor-icon" src="./icons/DarleneRobertson.svg" alt="Darlene Robertson"/>
-                <p class = "house-lessor-name">Darlene Robertson</p>
 
-                <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
-                <img class="time" src="./icons/Clock.svg" alt="Clock icon"/>
-                <p>2 min read| 24 Apr 2021</p>
+            <section class="tips-section">
+              <p class="subheader">See Tips And Trick From Our Partnership</p>
+              <h2 class="section-subtitle">Find Out More About Selling And Buying Homes</h2>
+              <button type="button" class="artikel-btn">More Artikel</button>
 
-            </div>
+              <div>
+                  <img class = "house-picture" src = "./icons/Rectangle_22.svg" alt="First House Picture">
+                  <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
+                  <p class = "house-lessor-name">Dianne Russel</p>
 
-            <img class = "house-picture" src = "./images/Fourth_House.jpg" alt="Fourth House Picture">
-            <img class="house-lessor-icon" src="./icons/CameronWilliamson.svg" alt="Cameron Williamson"/>
-            <p class = "house-lessor-name">Cameron Williamson</p>
+                  <h5>The Things We need To Check When We Want To Buy A House</h5>
+                  <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                  <p>4 min read| 25 Apr 2021</p>
 
-            <h5>12 Things To Know Before Buying A House</h5>
-            <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
-            <img class="time" src="./icons/Clock.svg" alt="Clock icon"/>
-            <p>8 min read| 25 Apr 2021</p>
+                  <img class = "house-picture" src = "./icons/Rectangle_22_1.svg" alt="Second House Picture">
+                  <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
+                  <p class = "house-lessor-name">Courtney Henry</p>
 
-          </section>
+                  <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
+                  <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                  <p>6 min read| 24 Apr 2021</p>
+
+
+                  <img class = "house-picture" src = "./icons/Rectangle_22_2.svg" alt="Third House Picture">
+                  <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
+                  <p class = "house-lessor-name">Darlene Robertson</p>
+
+                  <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
+                  <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                  <p>2 min read| 24 Apr 2021</p>
+
+              </div>
+
+              <img class = "house-picture" src = "./icons/Rectangle_23.svg" alt="Fourth House Picture">
+              <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
+              <p class = "house-lessor-name">Cameron Williamson</p>
+
+              <h5>12 Things To Know Before Buying A House</h5>
+              <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+              <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+              <p>8 min read| 25 Apr 2021</p>
+
+            </section>
 
 
 
           <section class = "subscribe-section">
 
-            <img class="background-section-img" img="./background/Subscribe.png" alt="Subscribe background"/>
+            <img class="background-section-img" src="./icons/Rectangle_24.svg" alt="Subscribe background"/>
             <h2 class="section-subtitle">Subscribe For More Info And Update From Hounter</h2>
             <input type="email" class="subscribe-input" placeholder="Your email here">
             <input type="submit" class="subscribe-btn" value = "Subscribe Now">
@@ -219,14 +412,13 @@
 
         <footer>
             <nav>
-                <img class="footer-logo" src="./icons/Hounter.svg" alt="Logo"/>
+                <img class="footer-logo" src="./icons/Logo.svg" alt="Logo"/>
                 <span class="logo">Hounter</span>
                 <p class="additional-info">We provide information about properties such as houses, villas and apartnments to help people to find their dream home</p>
             </nav>
             <div>
-                <a href="facebook-destination"><img class="links" src="./icons/Facebook.svg" alt= "Facebook icon"/></a> 
-                <a href="twitter-destination"><img class="links" src="./icons/Twitter.svg" alt= "Twitter icon"/></a> 
-                <a href="instagram-destination"><img class="links" src="./icons/Instagram.svg" alt= "Instagram icon"/></a>
+                <img class = "links" src="./icons/Frame_20.svg" alt="Logo"/>
+
             </div>
             <div>
                 <p class="subheader">Property</p>

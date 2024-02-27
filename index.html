@@ -82,14 +82,18 @@
     }
 
     .second-container{
-        display: flex; /* Make the container a flex container */
-        align-items: center; /* Center items vertically */
+        display: flex;
+        flex-direction: row;
+        align-content: center; /* Center items vertically */
         justify-content: space-between; /* Distribute items evenly across the container */
         padding-left: 10%;
-        padding-right: 20px; /* Add padding after the buttons */
         padding-bottom: 20px; /* Add padding after the buttons */
     }
 
+    .sub-section-btns{
+        display: inline;
+        padding-right: 10%;
+    }
     .icon-container {
         position: absolute;
         top: 10px; /* Adjust the top position as needed */
@@ -137,14 +141,6 @@
     .seller-details {
         display: flex;
         align-items: center; /* Align items vertically */
-    }
-
-    .house-lessor-icon {
-        margin-right: 10px; /* Adjust margin as needed */
-    }
-    
-    .house-lessor-description {
-        margin: 0; /* Remove default margins */
     }
 
     .sell-section {
@@ -215,10 +211,7 @@
     .subheader {
         font-weight: bold;
     }
-    .section-subtitle {
-        margin-top: 10px;
-        font-size: 1.2em;
-    }
+
     .review-images {
         display: flex;
         justify-content: space-between;
@@ -266,14 +259,7 @@
     .review-text {
         margin-bottom: 10px;
     }
-    .house-agent {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-    }
-    .house-agent-name {
-        margin-right: 10px;
-    }
+
     .house-agent-description {
         margin: 0;
     }
@@ -298,53 +284,54 @@
         margin-top: 10px; /* Add padding at the top *
     }*/
     .tips-section {
-        text-align: center;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-bottom: 10%;
+        flex-direction: row;
     }
-    .subheader {
-        font-weight: bold;
-        margin-bottom: 10px;
-        width: 100%; /* Full width */
+    .centered-content {
+        text-align: center;
+        margin-bottom: 20px; /* Adjust as needed */
+    }
+    .tipsNtricks{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+    .house-info{
+        display: flex;
+        flex-direction: inline;
+        flex:1;
+        gap: 10px;
+    }
+    .name-icon{
+
+        display:flex;
+        flex-direction: inline;
+        gap:10px;
+        align-items: center;
+    }
+    .imp-tip{
+        display: flex;
+        flex-direction: column;
+        align-items: self-end;
+
     }
     .section-subtitle {
         margin-top: 10px;
         font-size: 1.2em;
-        width: 100%; /* Full width */
     }
+
+    .section-subtitle-2{
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+
     .artikel-btn {
-        width: 100%; /* Full width */
-        margin-bottom: 10px;
+        width: auto; /* Full width */
+        padding: 10px 20px;
+        margin-top: 10px;
     }
-    .house-info {
-        display: flex;
-        align-items: center;
-        width: 50%; /* Half width */
-    }
-    .house-info img {
-        width: 80px; /* Adjust width as needed */
-        height: auto;
-        margin-right: 10px;
-    }
-    .house-description {
-        text-align: left;
-    }
-    .house-lessor-icon {
-        width: 30px; /* Adjust width as needed */
-        height: auto;
-        margin-right: 10px;
-    }
-    .house-lessor-name {
-        margin-bottom: 5px;
-    }
-    .time {
-        width: 20px; /* Adjust width as needed */
-        height: auto;
-        margin-right: 5px;
-        margin-bottom: 5px;
-    }
+
+
     .review-section {
         display: flex;
         flex-direction: column;
@@ -403,11 +390,6 @@
         text-align: center;
     }
     
-    .section-subtitle {
-        margin-bottom: 20px;
-        font-size: 1.5em; /* Adjust font size as needed */
-    }
-    
     .subscribe-input,
     .subscribe-btn {
         width: 80%; /* Adjust input and button width as needed */
@@ -415,6 +397,8 @@
         padding: 10px;
         font-size: 1em; /* Adjust font size as needed */
     }
+
+
     footer {
         background-color: #f0f0f0; /* Adjust background color as needed */
         padding: 20px;
@@ -455,11 +439,7 @@
         flex: 1;
         margin-top: 20px;
     }
-    
-    .subheader {
-        font-weight: bold;
-    }
-    
+        
     a {
         display: block;
         margin-top: 5px;
@@ -522,9 +502,7 @@
                     <button type="button" class="section-button">House</button>
                     <button type="button" class="section-button">Villa</button>
                     <button type="button" class="section-button">Apartnment</button>
-                </div>
-                <div class="navigate-section-btns">
-                    <button type="button" class="section-button">&lt;</button>
+                    <button type="button" class="section-button">&lt;</button> <br>
                     <button type="button" class="section-button">&gt;</button>
                 </div>
             </nav>
@@ -627,7 +605,7 @@
             <section class="sell-section">
                 <div class="sell-text">
                     <p class="subheader">Ready To Sell!</p>
-                    <h2 class="section-subtitle">Let's Tour And See Our House</h2>
+                    <h2 class="section-subtitle ">Let's Tour And See Our House</h2>
                     <p class="additional-info">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
             
                     <div class="house-description">
@@ -673,7 +651,7 @@
 
             <section class="review-section">
                 <p class="subheader">See Our Review</p>
-                <h2 class="section-subtitle">What Our Users Say About Us</h2>
+                <h2 class="section-subtitle-2">What Our Users Say About Us</h2>
         
                 <div class = "review-pretty">
                     <div class="review-images">
@@ -694,59 +672,78 @@
                 </div>
             </section>
 
-
+            <div class = "centered-content">
+                <p class="subheader">See Tips And Trick From Our Partnership</p>
+                <h2 class="section-subtitle-2">Find Out More About Selling And Buying Homes</h2>
+                <button type="button" class="artikel-btn">More Artikel</button>
+            </div>
+    
 
             <section class="tips-section">
-                <p class="subheader">See Tips And Trick From Our Partnership</p>
-                <h2 class="section-subtitle">Find Out More About Selling And Buying Homes</h2>
-                <button type="button" class="artikel-btn">More Artikel</button>
-        
-                <div class="house-info">
-                    <div>
+
+                <article class = "tipsNtricks">
+
+                    <div class="house-info">
                         <img class="house-picture" src="./icons/Rectangle_22.svg" alt="First House Picture">
-                        <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
-                        <p class="house-lessor-name">Dianne Russel</p>
+    
+                        <div class="house-description">
+                            <div class = "name-icon">
+                                <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
+                                <p class="house-lessor-name">Dianne Russel</p>
+                            </div>
+                            <h5>The Things We need To Check When We Want To Buy A House</h5>
+                            <div class = "name-icon">
+                                <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                                <p>4 min read| 25 Apr 2021</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="house-description">
-                        <h5>The Things We need To Check When We Want To Buy A House</h5>
-                        <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                        <p>4 min read| 25 Apr 2021</p>
-                    </div>
-                </div>
-        
-                <div class="house-info">
-                    <div>
+            
+                    <div class="house-info">
                         <img class="house-picture" src="./icons/Rectangle_22_1.svg" alt="Second House Picture">
-                        <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
-                        <p class="house-lessor-name">Courtney Henry</p>
+                        <div class="house-description">
+                            <div class = "name-icon">
+                                <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
+                                <p class="house-lessor-name">Courtney Henry</p>
+                            </div>
+                            <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
+                            <div class = "name-icon">
+                                <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                                <p>6 min read| 24 Apr 2021</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="house-description">
-                        <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
-                        <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                        <p>6 min read| 24 Apr 2021</p>
-                    </div>
-                </div>
-        
-                <div class="house-info">
-                    <div>
+            
+                    <div class="house-info">
                         <img class="house-picture" src="./icons/Rectangle_22_2.svg" alt="Third House Picture">
-                        <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
-                        <p class="house-lessor-name">Darlene Robertson</p>
+                        <div class="house-description">
+                            <div class = "name-icon">
+                                <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
+                                <p class="house-lessor-name">Darlene Robertson</p>
+                            </div>
+                                <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
+                            <div class = "name-icon">
+                                <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                                <p>2 min read| 24 Apr 2021</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="house-description">
-                        <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
+                </article>
+                <div class="imp-tip">
+                    <img class = "house-picture" src = "./icons/Rectangle_23.svg" alt="Fourth House Picture">
+                    <div class="name-icon">
+                        <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
+                        <p class = "house-lessor-name">Cameron Williamson</p>
+                    </div>
+      
+                    <h5>12 Things To Know Before Buying A House</h5>
+                    
+                    <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                    <div class="name-icon">
                         <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                        <p>2 min read| 24 Apr 2021</p>
+                        <p>8 min read| 25 Apr 2021</p>
                     </div>
                 </div>
-                <img class = "house-picture" src = "./icons/Rectangle_23.svg" alt="Fourth House Picture">
-                <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
-                <p class = "house-lessor-name">Cameron Williamson</p>
-  
-                <h5>12 Things To Know Before Buying A House</h5>
-                <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
-                <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                <p>8 min read| 25 Apr 2021</p>
             </section>
 
 
@@ -755,7 +752,7 @@
                 <div class="background-wrapper">
                     <img class="background-section-img" src="./icons/Rectangle_24.svg" alt="Subscribe background"/>
                     <div class="centered-text">
-                        <h2 class="section-subtitle">Subscribe For More Info And Update From Hounter</h2>
+                        <h2 class="section-subtitle-2">Subscribe For More Info And Update From Hounter</h2>
                         <input type="email" class="subscribe-input" placeholder="Your email here">
                         <input type="submit" class="subscribe-btn" value="Subscribe Now">
                     </div>

@@ -75,7 +75,7 @@
     .search-btn{
         position: absolute;
         top:50%;
-        right: 5%;
+        right:0;
         transform: translateY(-50%);
         background-color:rgb(16, 180, 117);
         color: white;
@@ -305,6 +305,10 @@
     .house-description {
         margin-top: 20px;
     }
+    .subtle-text{
+        color:gray;
+        font-weight:100;
+    }
     
     .house-items {
         display: flex;
@@ -491,7 +495,12 @@
         flex-direction: inline;
         flex:1;
         gap: 10px;
-        width:50%;
+        width:100%;
+    }
+    .house-picture-some{
+        width: 50%;
+        height: 70%;
+
     }
     .name-icon{
 
@@ -544,6 +553,16 @@
         position: relative;
         text-align: center;
     }
+    .first-img{
+        width: 6em;
+        height: 6em;
+        border-radius: 1em;
+    }
+    .last-img{
+        width: 3em;
+        height: 3em;
+        border-radius: 1em;
+    }
     
     .background-section-img {
         display: block;
@@ -558,34 +577,92 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-    
-    .subscribe-input,
-    .subscribe-btn {
+
+    .img-group{
+        position:absolute;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        top:50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        gap: 5em;
+        width: 15%;
+    }
+    .img-group-two{
+        position:absolute;
+        top:50%;
+        right: 0%;
+        position:absolute;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        transform: translate(-50%, -50%);
+        gap: 5em;
+        width: 15%;
+    }
+    .subscribe-container{
+        position:relative;
+        display: flex;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        margin-right: 1em;
+    }
+    .subscribe-input{
         width: 80%; 
         margin-bottom: 10px;
-        padding: 10px;
+        padding: 2vh 5vw 2vh 5vw;
+        border-radius: 10em;
         font-size: 1em; 
+        text-align: left;
+        border: 1px solid gray;
+    }
+    .subscribe-img{
+        position: absolute;
+        left: 5%;
+        transform: translateY(60%);
+    }
+    .subscribe-btn{
+        position: absolute;
+        right:0;
+    
+        background-color:rgb(16, 180, 117);
+        color: white;
+        font-size: 1em;
+        border-radius: 30px;
+
+        height: 85%;
+        width: auto;
+        border:none;
+    
     }
 
 
-    footer {
-        background-color: #f0f0f0; 
-        padding: 20px;
-    }
 
     .footer-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        padding: 2em;
+        margin-bottom: 5em;
     }
     
-    .footer-container:first-child {
-        flex-basis: calc(100% - 200px); 
-    }
     
-    footer nav {
-        display: flex;
-        align-items: center;
+
+    .foot-subheader{
+        font-size: 1em;
+        color: #000033;
+        font-weight: bold;
+    }
+
+    .some_link_on_site{
+        color:gray;
+        font-weight: 100;
+    }
+    .some_link_on_site:hover{
+        color:black;
     }
     
     .logo {
@@ -605,11 +682,8 @@
         justify-content: flex-end;
         align-items: center;
     }
-    
-    .footer-container > div {
-        flex: 1;
-        margin-top: 20px;
-    }
+
+
         
     a {
         display: block;
@@ -898,7 +972,7 @@
                 <article class = "tipsNtricks">
 
                     <div class="house-info">
-                        <img class="house-picture" src="./icons/Rectangle_22.svg" alt="First House Picture">
+                        <img class="house-picture-some" src="./icons/Rectangle_22.svg" alt="First House Picture">
     
                         <div class="house-description">
                             <div class = "name-icon">
@@ -908,13 +982,13 @@
                             <h5>The Things We need To Check When<br> We Want To Buy A House</h5>
                             <div class = "name-icon">
                                 <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                                <p>4 min read| 25 Apr 2021</p>
+                                <p class = "subtle-text">4 min read| 25 Apr 2021</p>
                             </div>
                         </div>
                     </div>
             
                     <div class="house-info">
-                        <img class="house-picture" src="./icons/Rectangle_22_1.svg" alt="Second House Picture">
+                        <img class="house-picture-some" src="./icons/Rectangle_22_1.svg" alt="Second House Picture">
                         <div class="house-description">
                             <div class = "name-icon">
                                 <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
@@ -923,13 +997,13 @@
                             <h5>7 Ways To Distinguish The Quality Of <br>The House We Want To Buy</h5>
                             <div class = "name-icon">
                                 <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                                <p>6 min read| 24 Apr 2021</p>
+                                <p class = "subtle-text">6 min read| 24 Apr 2021</p>
                             </div>
                         </div>
                     </div>
             
                     <div class="house-info">
-                        <img class="house-picture" src="./icons/Rectangle_22_2.svg" alt="Third House Picture">
+                        <img class="house-picture-some" src="./icons/Rectangle_22_2.svg" alt="Third House Picture">
                         <div class="house-description">
                             <div class = "name-icon">
                                 <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
@@ -938,7 +1012,7 @@
                                 <h5>The Best Way To Know The Quality Of <br>The House We Want To Buy</h5>
                             <div class = "name-icon">
                                 <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                                <p>2 min read| 24 Apr 2021</p>
+                                <p class = "subtle-text">2 min read| 24 Apr 2021</p>
                             </div>
                         </div>
                     </div>
@@ -952,10 +1026,10 @@
                         </div>
                         <h5>12 Things To Know Before Buying A House</h5>
                     
-                        <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                        <p class = "house-description, subtle-text">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
                         <div class="name-icon">
                             <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                            <p>8 min read| 25 Apr 2021</p>
+                            <p class = "subtle-text">8 min read| 25 Apr 2021</p>
                         </div>
                     </div>
                 </div>
@@ -965,11 +1039,30 @@
 
             <section class="subscribe-section">
                 <div class="background-wrapper">
+
+                    <div class="img-group">
+                        <img class = "first-img" src="icons/chair.jpg">
+                        <img src="icons/Ellipse_6_3.svg">
+                        <img src="icons/Ellipse_6_1.svg">
+                        <img class = "last-img" src = "icons/somehouse.jpg">
+                    </div>
+
                     <img class="background-section-img" src="./icons/Rectangle_24.svg" alt="Subscribe background"/>
+
                     <div class="centered-text">
-                        <h2 class="section-subtitle-2">Subscribe For More Info And Update From Hounter</h2>
-                        <input type="email" class="subscribe-input" placeholder="Your email here">
-                        <input type="submit" class="subscribe-btn" value="Subscribe Now">
+                        <h2 class="section-subtitle-2">Subscribe For More Info<br> And Update From Hounter</h2>
+                        <div class = "subscribe-container">
+                            <img class="subscribe-img" src="./icons/email.svg">
+                            <input type="email" class="subscribe-input" placeholder="Your email here">
+                            <input type="submit" class="subscribe-btn" value="Subscribe Now">
+                        </div>
+
+                    </div>
+                    <div class="img-group-two">
+                        <img class = "first-img" src="icons/some-house-too.jpg">
+                        <img src="icons/Ellipse_6_8.svg">
+                        <img src="icons/Ellipse_6_7.svg">
+                        <img class = "last-img" src="icons/second_chair.jpg">
                     </div>
                 </div>
             </section>
@@ -982,24 +1075,24 @@
             <div class="footer-container">
                 <div>
                     <img class="footer-logo" src="./icons/Logo.svg" alt="Logo"/>
-                    <p class="additional-info">We provide information about properties such as houses, villas, and apartments to help people find their dream home.</p>
+                    <p class="additional-info">We provide information about properties such<br> as houses, villas, and apartments to help people<br> find their dream home.</p>
                     <img class="links" src="./icons/Frame_20.svg" alt="Logo"/>
                 </div>
-                <div>
-                    <p class="subheader">Property</p>
+                <div class = "links">
+                    <p class="foot-subheader">Property</p>
                     <a href="some_link_on_site">House</a>
                     <a href="some_link_on_site">Apartment</a>
                     <a href="some_link_on_site">Villa</a>
                 </div>
                 <div>
-                    <p class="subheader">Article</p>
+                    <p class="foot-subheader">Article</p>
                     <a href="some_link_on_site">New Article</a>
                     <a href="some_link_on_site">Popular Article</a>
                     <a href="some_link_on_site">Most Read</a>
                     <a href="some_link_on_site">Tips & Tricks</a>
                 </div>
                 <div>
-                    <p class="subheader">Contact</p>
+                    <p class="foot-subheader">Contact</p>
                     <p>2464 Royal Ln.Mesa, New Jersey 45463</p>
                     <p>(671)555-0110</p>
                     <a href="hounter.com">info@hounter.com</a>

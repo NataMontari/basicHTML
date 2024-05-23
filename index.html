@@ -6,58 +6,162 @@
         <title>Web index html</title>
     </head>
     <style>
-    /*.header {
-        position: relative;
-        display: inline;
-    }*/
+
     body{
         background-image: url("./icons/background.png");
-        background-size: 100% auto; /* Set the width to cover the full width of the page */
-        background-position: center; /* Centers the background image */
-        background-repeat: no-repeat; /* Prevents the background image from repeating */
+        background-size: 100% 100%;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        margin:0;
+
     }
     .header-logo {
         position: absolute;
         padding-left: 5%;
+        padding-top: 5%;
     }
 
     .tag-container {
         width:50%;
         position: relative;
         float: right;
+        height: auto;
     }
 
     .menu-img {
-        width: 100%; /* Set the width of the image container to 100% */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; 
         display: block;
+        object-fit: cover;
     }
 
     .menu-btns {
         position: absolute;
         display: flex;
-        justify-content: space-between; /* Align buttons horizontally in the center */
-        align-items: stretch; /* Align buttons vertically in the center */
+        justify-content: space-between; 
+        align-items: stretch; 
         align-content: space-between;
-        gap: 20px;
-        min-width: 100px;
-        left: 50%; /* Position the buttons horizontally at 50% from the left edge of the container */
-        top: 10%; /* Position the buttons vertically at 50% from the top edge of the container */
-        transform: translate(-50%, -50%); /* Center the buttons */
+        gap: 2em;
+        min-width: 50%;
+
+        width: auto;
+        left: 50%; 
+        top: 10%; 
+        transform: translate(-50%, 0); 
+
+        
     }
+    .search-container{
+        position:relative;
+        display: flex;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        margin-right: 1em;
+    }
+
+    .search-input{
+        width: 25em;
+        padding: 2vh 5vw 2vh 5vw;
+        border-radius: 10em;
+        border: 1px solid gray;
+        text-align: left;
+    }
+
+    .icon-search{
+        position: absolute;
+        top:50%;
+        left: 3%;
+        transform: translateY(-50%);
+    }
+    .search-btn{
+        position: absolute;
+        top:50%;
+        right: 5%;
+        transform: translateY(-50%);
+        background-color:rgb(16, 180, 117);
+        color: white;
+        font-size: 1em;
+        border-radius: 30px;
+
+        height: 90%;
+        width: 20%;
+        border:none;
     
+    }
+
+    .brands{
+        display:flex;
+        flex-direction: row;
+        gap: 2em;
+    }
+
+
+    .about-us-btn, .article-btn, .property-btn{
+        background-color: transparent;
+        border:1px solid white;
+        font-weight:bold;
+        flex: 1 1 auto;
+        width: 9vw;
+    }
+    .sign-up-btn{
+        background-color: #ccffcc;
+        color:#006666;
+        font-weight:bold;
+        margin-left: 2em;
+        flex: 1 1 auto;
+        width:6vw;
+        
+    }
     .img-container {
         position: absolute;
-        bottom: 0; /* Position the image container at the bottom*/
-        left: 10%; /* Align the image container to the left */
+        bottom: 5%; 
+        left: 10%; 
         display: flex;
-        align-content: space-between;
+        align-content: space-around;
+        align-items: center;
+        gap: 1em;
+        width: 90%;
+
+
     }
+
+    .menu-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 2em;
+        background-color: white;
+        width: auto;
+        height: 5em;
+        padding: 1%;
+        gap: 5%;
+        overflow: hidden;
+        
+        
+    }
+
+    .sub-main-title{
+        color:  #000033;
+        font-weight: bold;
+    }
+    .sub-text-item{
+        color:  #000033;
+        font-weight: 50;
+    }
+
     .on-menu{
         padding-bottom: 5%;
     }
     .main-title{
         padding-top: 5%;
+        color:  #000033;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .title-highlight{
+        -webkit-text-stroke: 0.9px  #000033;
+        color:transparent;
     }
 
     .header {
@@ -66,63 +170,91 @@
         padding-bottom: 10%;
     }
 
-    /*.tag-container {
-        display: flex;
-        width:50%;
-        float: right;
-        align-items: center;
-    }
-    
-    .img-container {
-        position: relative;
-    }*/
+
     
     .content {
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start; /* Align content to the right */
+        align-items: flex-start;
         padding-left: 5%;
+        padding-top: 5%;
     }
 
     .second-container{
         display: flex;
         flex-direction: row;
-        align-content: center; /* Center items vertically */
-        justify-content: space-between; /* Distribute items evenly across the container */
+        align-content: center; 
+        justify-content: space-between; 
         padding-left: 10%;
-        padding-bottom: 20px; /* Add padding after the buttons */
+        padding-bottom: 20px; 
     }
 
     .sub-section-btns{
         display: inline;
         padding-right: 10%;
     }
-    .icon-container {
+    .section-button{
+        border: 1px solid gray;
+        background-color: transparent;
+        color: gray;
+    }
+    .section-button-house{
+        border: none;
+        background-color: #ccffcc;
+        color: rgb(16, 180, 117);
+    }
+    .forward-backward-btns{
+        display: flex;
+        flex-direction: row;
+        padding-right: 10%;
+        border-radius: 5em;
+        gap: 1em;
+    }
+    .forward{
+        background-color: lightgrey;
+        color:darkslategray;
+    }
+    .backward{
+        background-color: rgb(16, 180, 117);
+        color:white;
+    }
+    .icon-container-best-deals{
         position: absolute;
         bottom: 20px;
-        left: 10px; /* Adjust the left position as needed */
-        background-color: rgba(255, 255, 255, 0.5); /* Add background color with transparency */
-        padding: 5px; /* Add padding to the container */
+        left: 10px; 
+        background-color: #ccffcc; 
+        color:rgb(16, 180, 117);
+        border-radius: 3em;
+        padding: 5px;
+    }
+    .icon-container-popular{
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        background-color: #ffebe6; 
+        color: #cc2900;
+        border-radius: 3em;
+        padding: 5px; 
     }
 
     .house-offer {
-        max-width: 40em; /* Set max-width for the images */
+        max-width: 40em; 
         height: auto;
     }
 
     .house-container {
-        flex: 0 0 calc(25% - 20px); /* Adjust width of house containers */
-        margin-bottom: 20px; /* Add margin at the bottom */
+        flex: 0 0 calc(25% - 20px); 
+        margin-bottom: 20px; 
         position: relative;
         
     }
 
     .recommendation-houses {
         display: flex;
-        flex-wrap: nowrap; /* Prevent wrapping */
-        overflow-x: hidden; /* Enable horizontal scrolling */
+        flex-wrap: nowrap; 
+        overflow-x: hidden; 
         padding-left: 10%;
     }
     .recommendation-section {
@@ -133,8 +265,10 @@
         justify-content: space-between;
         padding-bottom: 10%;
     }
+
+
     .house-details {
-        text-align: left; /* Center align text */
+        text-align: left; 
     }
 
     .house-wrapper {
@@ -145,7 +279,16 @@
     }
     .seller-details {
         display: flex;
-        align-items: center; /* Align items vertically */
+        align-items: center;
+        gap: 5%;
+    }
+    .house-lessor-name{
+        color:#000033;
+        font-weight: bold;
+    }
+    .house-lessor-description{
+        color:grey;
+        font-weight: 200;
     }
 
     .sell-section {
@@ -169,16 +312,29 @@
     }
     
     .house-items img {
+        margin-left: 10px;
         margin-right: 10px;
     }
     
     .house-agent {
         display: flex;
+        flex-direction: row;
         align-items: center;
+        gap: 2em;
     }
     
-    .house-agent-name {
-        margin-right: 10px;
+
+    .house-agent-name{
+        color:#000033;
+        font-weight: bold;
+    }
+    .house-agent-description{
+        color:grey;
+        font-weight: 200;
+    }
+    .contact-btn{
+        align-items: center;
+        margin-left: auto;
     }
 
     .video-container {
@@ -192,42 +348,57 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        padding-left: 10%;
+        
     }
 
     .video-thumbnails {
         position: absolute;
-        bottom: 0;
+        bottom: -10%;
         width: 100%;
         display: flex;
-        justify-content: space-around;
-        padding-left: 10%;
+        transform: translateX(-5%);
+        gap: 1em;
+        align-items: baseline;
+
+        
     }
 
     .video-thumbnails img {
-        width: 20%;
         height: auto;
     }
 
+    .sofa {
+        width: 40%;
+    }
+    .stuff{
+        width:20%;
+    }
     .review-section {
         text-align: center;
         padding-bottom: 20%;
     }
+
+    .some_padding{
+        padding-left:10%;
+        position: relative;
+    }
+
     .subheader {
         font-weight: bold;
         position: relative;
-        color: rgb(255, 187, 0); /* Set the text color to yellow */
-        margin-bottom: 20px; /* Add margin at the bottom */
+        color: rgb(255, 187, 0); 
+        margin-bottom: 20px; 
     }
     .subheader::before {
         position: absolute;
-        content: ""; /* Add an empty content before the text */
-        top: -10px;
-        left: 50%; /* Position the line element at the center */
-        transform: translateX(-50%); /* Center the line element horizontally */
-        width: 50px; /* Set the width of the line */
-        height: 2px; /* Set the height of the line */
-        background-color: rgb(255, 187, 0); /* Set the color of the line */
+        content: ""; 
+        top: 50%;
+        left: -5em; 
+        transform: translateY(-50%); 
+        width: 50px;
+        height: 2px; 
+        background-color: rgb(255, 187, 0); 
+        margin-right: 10px;
     }
 
     .review-images {
@@ -258,12 +429,13 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: absolute;
             bottom: -10%;
-            width: 50%; /* Adjust the width of the white box */
+            width: 30%; 
             height:30%;
-            left: 50%; /* Position the box in the center horizontally */
+            left: 50%;
             font: 12px;
-            transform: translateX(-50%);
-            padding: 20px; /* Add padding inside the box */
+            transform: translateX(-45%);
+            padding: 10px 20px; 
+            font-size: 10px;
 
     }
     .review-pretty{
@@ -284,58 +456,65 @@
     .rating {
         width: 20px;
         height: 20px;
-        margin-left: auto;
-        display: block;
     }
+
     .star-icon{
         font-weight:bold;
     }
-    /*.se-offer {
-    width: calc(25% - 20px); /* Adjust the width as needed 
-        margin-right: 20px; /* Add margin between images
-        margin-bottom: 20px; /* Add margin below images 
-    }*/
 
-    /*.house-info {
-        width: 100%; /* Make text and icons span the full width 
-        text-align: center; /* Center text and icons 
-    }*/
-
-    /*.tag-container, .house-name, .price-tag, .house-lessor-icon, .house-lessor-name, .house-lessor-description {
-        margin-top: 10px; /* Add padding at the top *
-    }*/
     .tips-section {
         display: flex;
         flex-direction: row;
         padding-left: 10%;
     }
-    .centered-content {
+    .centered-content{
         text-align: center;
-        margin-bottom: 20px; /* Adjust as needed */
+        margin-bottom: 20px; 
     }
+    .yellow-line{
+        width:50px;
+        text-align: center;
+        background-color:rgb(255, 187, 0);
+        border: none;
+        height: 2px;
+    }
+
+    
     .tipsNtricks{
         display: flex;
         flex-direction: column;
         align-items: self-start;
+        width:50%;
     }
     .house-info{
         display: flex;
         flex-direction: inline;
         flex:1;
         gap: 10px;
+        width:50%;
     }
     .name-icon{
 
         display:flex;
         flex-direction: inline;
-        gap:10px;
+        gap:1em;
         align-items: center;
     }
     .imp-tip{
         display: flex;
         flex-direction: column;
         align-items: self-end;
+        width:50%;
 
+
+    }
+    .house-picture{
+        width: 100%;
+        height: auto;
+
+    }
+    .house-text{
+        margin:0;
     }
     .section-subtitle {
         margin-top: 10px;
@@ -348,14 +527,12 @@
     }
 
     .artikel-btn {
-        width: auto; /* Full width */
+        width: auto; 
         padding: 10px 20px;
         margin-top: 10px;
     }
 
-    .review-box{
-        font-size: 10px;
-    }
+
     .subscribe-section {
         position: relative;
         padding-left: 10%;
@@ -384,15 +561,15 @@
     
     .subscribe-input,
     .subscribe-btn {
-        width: 80%; /* Adjust input and button width as needed */
+        width: 80%; 
         margin-bottom: 10px;
         padding: 10px;
-        font-size: 1em; /* Adjust font size as needed */
+        font-size: 1em; 
     }
 
 
     footer {
-        background-color: #f0f0f0; /* Adjust background color as needed */
+        background-color: #f0f0f0; 
         padding: 20px;
     }
 
@@ -403,7 +580,7 @@
     }
     
     .footer-container:first-child {
-        flex-basis: calc(100% - 200px); /* Adjust the width to fit your content */
+        flex-basis: calc(100% - 200px); 
     }
     
     footer nav {
@@ -417,8 +594,10 @@
     }
     
     .additional-info {
+        color:gray;
         margin-top: 5px;
         font-size: 0.8em;
+        font-weight: 100;
     }
     
     .icon-links {
@@ -435,7 +614,7 @@
     a {
         display: block;
         margin-top: 5px;
-        color: #333; /* Adjust link color as needed */
+        color: #333; 
         text-decoration: none;
     }
     
@@ -444,43 +623,50 @@
     }
 
     button {
-        border-radius: 20px; /* Adjust the border-radius to make the buttons rounded */
-        background-color: rgb(16, 180, 117); /* Set the background color to green */
-        color: white; /* Set the text color to white */
-        padding: 10px 20px; /* Add padding to the buttons */
-        border: none; /* Remove the border */
+        border-radius: 20px; 
+        background-color: rgb(16, 180, 117); 
+        color: white; 
+        padding: 10px 20px; 
+        border: none;
+        align-items: center;
     }
     
-    /* Optionally, you can add hover effects */
+
     button:hover {
-        background-color: green; /* Change background color on hover */
-        cursor: pointer; /* Change cursor to pointer on hover */
+        background-color: green; 
+        cursor: pointer; 
     }
 
     .sub-section-btns {
-        display: flex; /* Change display property to flex */
-        align-items: center; /* Align items vertically in the center */
+        display: flex; 
+        align-items: center; 
     }
     
     .sub-section-btns button {
-        margin-right: 10px; /* Add margin between buttons */
+        margin-right: 10px; 
     }
-    .some_padding{
-        padding-left:10%;
+
+    .line{
+        width:80%;
+        color: lightgray;
+        margin: 20px auto auto 0;
     }
+
     
     </style>
     <body>
         <header class="header">
             <img class="header-logo" src="./icons/Logo.svg" alt="Logo" />
             <div class = "content">
-                <h1 class = "main-title">Find the Place To Live <br><span class="title-highlight">Your Dreams</span><br> Easily Here</h1>
-                <p class="additional-info">Everything you need about finding your place to live will be here, where it will be easier for you</p>
-                <i class="icon-search"><img src="./icons/location.svg" alt= "Search icon"></i>
-                <input type="text" placeholder="Search for the location you want!">
-                <input type="submit" class="search-btn" value = "Search&gt;">
+                <h1 class = "main-title">Find the Place To <br>Live <span class="title-highlight">Your Dreams</span><br> Easily Here</h1>
+                <p class="additional-info">Everything you need about finding your place to live will be here,<br> where it will be easier for you</p>
+                <div class = "search-container">
+                    <i class="icon-search"><img src="./icons/location.svg" alt= "Search icon"></i>
+                    <input type="text" class = "search-input" placeholder="Search for the location you want!">
+                    <input type="submit" class="search-btn" value = "Search &gt;">
+                </div>
                 <p class="additional-info">Our Partnership</p>
-                <div>
+                <div class = "brands">
                     <img class="partners" src="./icons/traveloka_logo_2.svg" alt= "Travelokane icon"/>
                     <img class="partners" src="./icons/traveloka_logo_5.svg" alt= "Tiketcom icon"/>
                     <img class="partners" src="./icons/traveloka_logo_3.svg" alt= "Airbnb icon"/>
@@ -494,12 +680,23 @@
                     <button type="button" class="about-us-btn">About us</button>
                     <button type="button" class="article-btn">Article</button>
                     <button type="menu" class="property-btn">Property</button>
-                    <button type="button" class="sign-up-btn">Sign up</button>
+                    <button type="button" class="sign-up-btn">Sign Up!</button>
                 </div>
                 <div class = "img-container">
-                    <img class = "menu-img-background" src="./icons/Group_7.svg" alt = "people group photo"/>
-                    <img class = "menu-img-background on-menu" src="./icons/Rectangle_12.svg" alt = "small  house photo"/>
-                    <img class = "menu-img-background" src="./icons/Ellipse 6.svg" alt = "some lady photo"/>
+                    <div class = "menu-item">
+                        <img class = "menu-img-background" src="./icons/Group_7.svg" alt = "people group photo"/>
+                        <p class="sub-main-title">1K+ People<br><span class = "sub-text-item">Successfully Getting Home</span></p>
+                    </div>
+
+                    <div class="menu-item">
+                        <img class = "menu-img-background on-menu" src="./icons/Rectangle_12.svg" alt = "small  house photo"/>
+                        <p class="sub-main-title">56 Houses<br><span class = "sub-text-item">Sold Monthly</span></p>
+                    </div>
+                    <div class="menu-item">
+                        <img class = "menu-img-background" src="./icons/Ellipse 6.svg" alt = "some lady photo"/>
+                        <p class="sub-main-title">4K Users<br><span class = "sub-text-item">People Love Us</span></p>
+
+                    </div>
                 </div>
                
             </div>
@@ -515,11 +712,17 @@
             <nav class = "second-container">
                 <h2 class="section-subtitle">Featured House</h2>
                 <div class="sub-section-btns">
-                    <button type="button" class="section-button">House</button>
-                    <button type="button" class="section-button">Villa</button>
-                    <button type="button" class="section-button">Apartnment</button>
-                    <button type="button" class="section-button">&lt;</button> <br>
-                    <button type="button" class="section-button">&gt;</button>
+                    <button type="button" class="section-button, section-button-house">
+                        <img src="./icons/house-g.svg"> House</button>
+                    <button type="button" class="section-button">
+                        <img src="./icons/villa.svg">   Villa</button>
+                    <button type="button" class="section-button">
+                        <img src = "./icons/apartment.svg">   Apartnment</button>
+
+                </div>
+                <div class = "forward-backward-btns">
+                    <button type="button" class="forward">&lt;</button> <br>
+                    <button type="button" class="backward">&gt;</button>
                 </div>
             </nav>
 
@@ -529,7 +732,7 @@
 
                     <div class="house-container">
                         <img class="house-offer" src="./icons/Rectangle_15.svg" alt="Roselands house" />
-                        <div class="icon-container">
+                        <div class="icon-container-popular">
                             <img src="./icons/fire.svg" alt="Fire popular icon"/>
                             Popular
                         </div>
@@ -539,10 +742,8 @@
                         <h4 class="price-tag">$ 35.000.000 </h4>
                         <div class="seller-details">
                             <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
-                            <div>
-                                <h5 class = "house-lessor-name">Dianne Russel</h5>
-                                <p class = "house-lessor-description">Manchester, Kentucky</p>
-                            </div>
+                            <p class = "house-lessor-name">Dianne Russel<br><span class="house-lessor-description">Manchester, Kentucky</span>
+
                         </div>
                     </div>
                 </div>
@@ -557,10 +758,7 @@
                         <h4 class="price-tag">$ 20.000.000 </h4>
                         <div class="seller-details">
                             <img class="house-lessor-icon" src="./icons/Woodlandside_lessor.svg" alt="Woodlandside-lessor"/>
-                            <div>
-                                <h5 class = "house-lessor-name">Robert Fox</h5>
-                                <p class = "house-lessor-description">Dr.San Jose, South Dakota</p>
-                            </div>
+                            <p class="house-lessor-name">Robert Fox<br><span class="house-lessor-description">Dr.San Jose, South Dakota</span></p>
                         </div>
                     </div>
                 </div>
@@ -568,7 +766,7 @@
                 <div class="house-wrapper">
                     <div class = "house-container">
                         <img class="house-offer" src="./icons/Rectangle 15_2.svg" alt="The old lighthouse" />
-                        <div class="icon-container">
+                        <div class="icon-container-best-deals">
                             <img src="./icons/wallet.svg" alt="PentHouse Best Deals icon"/>
                             Best Deals
                         </div>
@@ -579,10 +777,8 @@
                         <h4 class="price-tag">$ 44.000.000 </h4>
                         <div class="seller-details">
                             <img class="house-lessor-icon" src="./icons/Ellipse_6_3.svg" alt="The_old_lighthouse_lessor"/>
-                            <div>
-                                <h5 class = "house-lessor-name">Ronald Richards</h5>
-                                <p class = "house-lessor-description">Santa Ana, Illinois</p>
-                            </div>
+                            <p class="house-lessor-name">Ronald Richards<br><span class="house-lessor-description">Santa Ana, Illinois</span></p>
+
                         </div>
                     </div>
                 </div>
@@ -590,7 +786,7 @@
                 <div class = "house-wrapper">
                     <div class = "house-container">
                         <img class="house-offer" src="./icons/Rectangle_15_4.svg" alt="Cosmo's house" />
-                        <div class="icon-container">
+                        <div class="icon-container-popular">
                             <img src="./icons/fire.svg" alt="Fire popular icon"/>
                             Popular
                         </div>
@@ -601,10 +797,7 @@
                     </div>
                     <div class="seller-details">
                         <img class="house-lessor-icon" src="./icons/Ellipse_6_8.svg" alt="Cosmos_house_lessor"/>
-                        <div>
-                            <h5 class="house-lessor-name">Jenny Williams</h5>
-                            <p class="house-lessor-description">Preston Rd</p>
-                        </div>
+                        <p class="house-lessor-name">Jenny Williams<br><span class="house-lessor-description">Preston Rd</span></p>
                     </div>
                 </div>
             </section>
@@ -622,7 +815,7 @@
                 <div class="sell-text">
                     <p class="subheader">Ready To Sell!</p>
                     <h2 class="section-subtitle ">Let's Tour And See Our House</h2>
-                    <p class="additional-info">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+                    <p class="additional-info">Houses recommended by our partners that have been<br> curated to become the home of your dreams!</p>
             
                     <div class="house-description">
                         <p class="house-detail">House Detail</p>
@@ -638,14 +831,12 @@
                             <img class="items-icons" src="./icons/floor.svg" alt="Num of Floors"/>
                             <span class="item-text">2 Floors</span>
                         </div>
-                        <hr>
+                        <hr class = "line">
                         <div class="house-agent">
                             <img class="house-agent-icon" src="./icons/Ellipse_6_1.svg" alt="Manager Director"/>
-                            <div class="agent-details">
-                                <h5 class="house-agent-name">Dianne Russel</h5>
-                                <p class="house-agent-description">Manager Director</p>
-                            </div>
-                            <button class="contact-btn" type="button">Contact Now</button>
+                            <p class = "house-agent-name">Dianne Russel<br><span class="house-agent-description">Manager Director</span>
+                            <button class="contact-btn" type="button"><img src="./icons/phone.svg">
+                                Contact Now</button>
                         </div>
                     </div>
                 </div>
@@ -656,12 +847,13 @@
                         Your browser does not support the video feature
                     </video>
                     <div class="video-thumbnails">
-                        <img class="picture_on_video" src="./icons/Rectangle_18.svg" alt="couch" />
-                        <img class="picture_on_video" src="./icons/Rectangle_19.svg" alt="vase" />
-                        <img class="picture_on_video" src="./icons/Rectangle_20.svg" alt="chair" />
+                        <img class="picture_on_video, sofa" src="./icons/Rectangle_18.svg" alt="couch" />
+                        <img class="picture_on_video, stuff" src="./icons/Rectangle_19.svg" alt="vase" />
+                        <img class="picture_on_video, stuff" src="./icons/Rectangle_20.svg" alt="chair" />
                     </div>
                 </div>
             </section>
+            <hr class = "yellow-line">
             <div class = "centered-content">
                 <p class="subheader">See Our Review</p>
                 <h2 class="section-subtitle-2">What Our Users Say About Us</h2>
@@ -678,15 +870,14 @@
         
                     <div class="review-box">
                         <h3 class="review">Best! I Got The House I Wanted Through Hounter</h3>
-                        <p class="review">Through this website, I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want</p>
+                        <p class="review">Through this website, I can get a house with the type and specifications I want<br> very easily, without a complicated process to be able to find information on the<br> house we want</p>
                         <div class="name-icon">
                             <img class="house-agent" src="./icons/Ellipse_6_1.svg" alt="Manager Director" />
-                            <div>
-                                <h5 class="house-agent-name">Dianne Russel</h5>
-                                <p class="house-agent-description">Manager Director</p>
+                            <p class = "house-agent-name">Dianne Russel<br><span class="house-agent-description">Manager Director</span>
+                            <div class = "full-rating">
+                                <img class="rating" src="./icons/star.svg" alt="Rating icon" />
+                                <span class = "star-icon">4.6</span>
                             </div>
-                            <img class="rating" src="./icons/star.svg" alt="Rating icon" />
-                            <span class = "star-icon">4.6</span>
                         </div>
 
   
@@ -694,9 +885,10 @@
                 </div>
             </section>
 
+            <hr class = "yellow-line">
             <div class = "centered-content">
                 <p class="subheader">See Tips And Trick From Our Partnership</p>
-                <h2 class="section-subtitle-2">Find Out More About Selling And Buying Homes</h2>
+                <h2 class="section-subtitle-2">Find Out More About<br> Selling And Buying Homes</h2>
                 <button type="button" class="artikel-btn">More Artikel</button>
             </div>
     
@@ -713,7 +905,7 @@
                                 <img class="house-lessor-icon" src="./icons/Ellipse_6_1.svg" alt="Roselands-lessor"/>
                                 <p class="house-lessor-name">Dianne Russel</p>
                             </div>
-                            <h5>The Things We need To Check When We Want To Buy A House</h5>
+                            <h5>The Things We need To Check When<br> We Want To Buy A House</h5>
                             <div class = "name-icon">
                                 <img class="time" src="./icons/clock.svg" alt="clock icon"/>
                                 <p>4 min read| 25 Apr 2021</p>
@@ -728,7 +920,7 @@
                                 <img class="house-lessor-icon" src="./icons/Ellipse_6_7.svg" alt="Courtney Henry"/>
                                 <p class="house-lessor-name">Courtney Henry</p>
                             </div>
-                            <h5>7 Ways To Distinguish The Quality Of The House We Want To Buy</h5>
+                            <h5>7 Ways To Distinguish The Quality Of <br>The House We Want To Buy</h5>
                             <div class = "name-icon">
                                 <img class="time" src="./icons/clock.svg" alt="clock icon"/>
                                 <p>6 min read| 24 Apr 2021</p>
@@ -743,7 +935,7 @@
                                 <img class="house-lessor-icon" src="./icons/Ellipse_6_6.svg" alt="Darlene Robertson"/>
                                 <p class="house-lessor-name">Darlene Robertson</p>
                             </div>
-                                <h5>The Best Way To Know The Quality Of The House We Want To Buy</h5>
+                                <h5>The Best Way To Know The Quality Of <br>The House We Want To Buy</h5>
                             <div class = "name-icon">
                                 <img class="time" src="./icons/clock.svg" alt="clock icon"/>
                                 <p>2 min read| 24 Apr 2021</p>
@@ -753,17 +945,18 @@
                 </article>
                 <div class="imp-tip">
                     <img class = "house-picture" src = "./icons/Rectangle_23.svg" alt="Fourth House Picture">
-                    <div class="name-icon">
-                        <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
-                        <p class = "house-lessor-name">Cameron Williamson</p>
-                    </div>
-      
-                    <h5>12 Things To Know Before Buying A House</h5>
+                    <div class="house-text">
+                        <div class="name-icon">
+                            <img class="house-lessor-icon" src="./icons/Ellipse_6_9.svg" alt="Cameron Williamson"/>
+                            <p class = "house-lessor-name">Cameron Williamson</p>
+                        </div>
+                        <h5>12 Things To Know Before Buying A House</h5>
                     
-                    <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
-                    <div class="name-icon">
-                        <img class="time" src="./icons/clock.svg" alt="clock icon"/>
-                        <p>8 min read| 25 Apr 2021</p>
+                        <p class = "house-description">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
+                        <div class="name-icon">
+                            <img class="time" src="./icons/clock.svg" alt="clock icon"/>
+                            <p>8 min read| 25 Apr 2021</p>
+                        </div>
                     </div>
                 </div>
             </section>
